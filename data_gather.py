@@ -123,7 +123,7 @@ uninsured_fpl = uninsured_fpl.merge(expansion_df[['Location', 'expanded_medicaid
 #Medicaid coverage by age, both number and percent
 def read_medicaid_age_data(file_extension):
     #read in csv file and remove extra rows at bottom
-    df_filename = file_path + '//medicaid_age_' + file_extension + '.csv'
+    df_filename = file_path + file_extension + '.csv'
     df = pd.read_csv(df_filename, skiprows=2, header=0)
     df = df[:52]
 
@@ -135,8 +135,8 @@ def read_medicaid_age_data(file_extension):
     return(df)
 
 
-medicaid_age_perc = read_medicaid_age_data('percent')
-medicaid_age_num = read_medicaid_age_data('number')
+medicaid_age_perc = read_medicaid_age_data('//medicaid_age_percent')
+medicaid_age_num = read_medicaid_age_data('//medicaid_age_number')
 
 #separate state level and national data
 medicaid_age_perc_natl = medicaid_age_perc[medicaid_age_perc['Location'] == 'United States']
@@ -146,6 +146,11 @@ medicaid_age_num_natl = medicaid_age_num[medicaid_age_num['Location'] == 'United
 medicaid_age_num = medicaid_age_num[medicaid_age_num['Location'] != 'United States']
 
 
+#Uninsured by age
+uninsured_age = read_medicaid_age_data('//uninsured_by_age_2008_2019')
+uninsured_age_natl = uninsured_age[uninsured_age['Location'] == 'United States']
+uninsured_age = uninsured_age[uninsured_age['Location'] != 'United States']
+
 ####Datasets to write out:
 #df_race_viz_2018
 #df_all_2008_2018
@@ -154,6 +159,7 @@ medicaid_age_num = medicaid_age_num[medicaid_age_num['Location'] != 'United Stat
 #uninsured_fpl
 #medicaid_age_perc_natl
 #medicaid_age_num_natl
+#uninsured_age_natl
 
 #write out datasets
 df_race_viz_2018.to_csv(file_path + '\\df_race_viz_2018.csv')
@@ -165,4 +171,4 @@ coverage_type_natl.to_csv(file_path + '\\coverage_type_natl.csv')
 uninsured_fpl.to_csv(file_path + '\\uninsured_fpl.csv')
 medicaid_age_perc_natl.to_csv(file_path + '\\medicaid_age_perc_natl.csv')
 medicaid_age_num_natl.to_csv(file_path + '\\medicaid_age_num_natl.csv')
-
+uninsured_age.to_csv(file_path + '\\uninsured_age.csv')
