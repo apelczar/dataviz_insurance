@@ -156,13 +156,13 @@ medicaid_age_num = medicaid_age_num[medicaid_age_num['Location'] != 'United Stat
 #medicaid_age_num_natl
 
 #write out datasets
-df_race_viz_2018.to_pickle(file_path + '\\df_race_viz_2018.pkl')
-df_all_2008_2018.to_pickle(file_path + '\\df_all_2008_2018.pkl')
+df_race_viz_2018.to_csv(file_path + '\\df_race_viz_2018.csv')
+df_all_2008_2018.to_csv(file_path + '\\df_all_2008_2018.csv')
 
-coverage_type_2018.to_pickle(file_path + '\\coverage_type_2018.pkl')
-coverage_type_natl.to_pickle(file_path + '\\coverage_type_natl.pkl')
+coverage_type_2018.to_csv(file_path + '\\coverage_type_2018.csv')
+coverage_type_natl.to_csv(file_path + '\\coverage_type_natl.csv')
 
-uninsured_fpl.to_pickle(file_path + '\\uninsured_fpl.pkl')
-medicaid_age_perc_natl.to_pickle(file_path + '\\medicaid_age_perc_natl.pkl')
-medicaid_age_num_natl.to_pickle(file_path + '\\medicaid_age_num_natl.pkl')
+uninsured_fpl.to_csv(file_path + '\\uninsured_fpl.csv')
+medicaid_age_perc_natl.to_csv(file_path + '\\medicaid_age_perc_natl.csv')
+medicaid_age_num_natl.to_csv(file_path + '\\medicaid_age_num_natl.csv')
 
