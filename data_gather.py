@@ -103,7 +103,7 @@ coverage_type = coverage_type[coverage_type['Location'] != 'United States']
 #add in expansion y/n and restrict to 2018
 coverage_type = coverage_type.merge(expansion_df[['Location', 'expanded_medicaid']],
                                     on='Location')
-coverage_type_2018 = coverage_type[coverage_type['year'] == 2018]
+coverage_type_2018 = coverage_type[(coverage_type['year'] == 2018) | (coverage_type['year'] == 2008)]
 
 
 
@@ -151,6 +151,24 @@ uninsured_age = read_medicaid_age_data('//uninsured_by_age_2008_2019')
 uninsured_age_natl = uninsured_age[uninsured_age['Location'] == 'United States']
 uninsured_age = uninsured_age[uninsured_age['Location'] != 'United States']
 
+
+#Medicaid income eligibility limits
+elig_filename = file_path + '\\medicaid_parents_income_eligibility.csv'
+elig_limits = pd.read_csv(elig_filename, skiprows=2, header=0)
+elig_limits = elig_limits[:52]
+elig_limits = elig_limits.drop(['Footnotes'], axis=1)
+
+elig_limits = elig_limits.rename({'December 2009': 'January 2010'}, axis=1)
+elig_limits_long = elig_limits.set_index('Location')
+elig_limits_long = elig_limits_long.stack(0).reset_index()
+
+elig_limits_long[['Month', 'Year']] = elig_limits_long['level_1'].str.split(' ', expand=True)
+elig_limits_long = elig_limits_long.drop(['level_1', 'Month'], axis=1).rename(columns={0: 'elig_limit'})
+elig_limits_long['Year'] = pd.to_numeric(elig_limits_long['Year'])
+
+elig_limits_long = elig_limits_long[(elig_limits_long['Location'] != 'United States') & (elig_limits_long['Year'] >= 2008)]
+
+
 ####Datasets to write out:
 #df_race_viz_2018
 #df_all_2008_2018
@@ -160,6 +178,7 @@ uninsured_age = uninsured_age[uninsured_age['Location'] != 'United States']
 #medicaid_age_perc_natl
 #medicaid_age_num_natl
 #uninsured_age_natl
+#elig_limits_long
 
 #write out datasets
 df_race_viz_2018.to_csv(file_path + '\\df_race_viz_2018.csv')
@@ -172,3 +191,4 @@ uninsured_fpl.to_csv(file_path + '\\uninsured_fpl.csv')
 medicaid_age_perc_natl.to_csv(file_path + '\\medicaid_age_perc_natl.csv')
 medicaid_age_num_natl.to_csv(file_path + '\\medicaid_age_num_natl.csv')
 uninsured_age_natl.to_csv(file_path + '\\uninsured_age_natl.csv')
+elig_limits_long.to_csv(file_path + 'elig_limits_long.csv')
