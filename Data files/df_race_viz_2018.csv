@@ -1,103 +1,103 @@
 ,NAME,STABREV,number_uninsured,percent_uninsured,RACECAT,race_category,time,state,race_cat_short
-2042,Alabama,AL,255754,10.2,1,"White alone, not Hispanic",2018,01,White
-2043,Alabama,AL,143788,13.3,2,"Black alone, not Hispanic",2018,01,Black
-2046,Alaska,AK,39798,10.7,1,"White alone, not Hispanic",2018,02,White
-2047,Alaska,AK,3560,16.4,2,"Black alone, not Hispanic",2018,02,Black
-2050,Arizona,AZ,231627,8.2,1,"White alone, not Hispanic",2018,04,White
-2051,Arizona,AZ,30880,11.5,2,"Black alone, not Hispanic",2018,04,Black
-2054,Arkansas,AR,132836,7.8,1,"White alone, not Hispanic",2018,05,White
-2055,Arkansas,AR,38420,9.9,2,"Black alone, not Hispanic",2018,05,Black
-2058,California,CA,559114,5.0,1,"White alone, not Hispanic",2018,06,White
-2059,California,CA,123035,6.8,2,"Black alone, not Hispanic",2018,06,Black
-2062,Colorado,CO,196762,6.3,1,"White alone, not Hispanic",2018,08,White
-2063,Colorado,CO,17374,8.9,2,"Black alone, not Hispanic",2018,08,Black
-2066,Connecticut,CT,70803,3.9,1,"White alone, not Hispanic",2018,09,White
-2067,Connecticut,CT,21685,7.0,2,"Black alone, not Hispanic",2018,09,Black
-2070,Delaware,DE,22985,5.2,1,"White alone, not Hispanic",2018,10,White
-2071,Delaware,DE,11692,6.6,2,"Black alone, not Hispanic",2018,10,Black
-2074,District of Columbia,DC,3869,1.8,1,"White alone, not Hispanic",2018,11,White
-2075,District of Columbia,DC,10283,4.0,2,"Black alone, not Hispanic",2018,11,Black
-2078,Florida,FL,1048169,13.0,1,"White alone, not Hispanic",2018,12,White
-2079,Florida,FL,460727,16.5,2,"Black alone, not Hispanic",2018,12,Black
-2082,Georgia,GA,560237,12.8,1,"White alone, not Hispanic",2018,13,White
-2083,Georgia,GA,443896,15.6,2,"Black alone, not Hispanic",2018,13,Black
-2086,Hawaii,HI,7781,3.5,1,"White alone, not Hispanic",2018,15,White
-2087,Hawaii,HI,1292,5.4,2,"Black alone, not Hispanic",2018,15,Black
-2090,Idaho,ID,128868,11.1,1,"White alone, not Hispanic",2018,16,White
-2091,Idaho,ID,1745,14.9,2,"Black alone, not Hispanic",2018,16,Black
-2094,Illinois,IL,326261,5.3,1,"White alone, not Hispanic",2018,17,White
-2095,Illinois,IL,133921,9.0,2,"Black alone, not Hispanic",2018,17,Black
-2098,Indiana,IN,349989,8.3,1,"White alone, not Hispanic",2018,18,White
-2099,Indiana,IN,61859,11.5,2,"Black alone, not Hispanic",2018,18,Black
-2102,Iowa,IA,98913,4.7,1,"White alone, not Hispanic",2018,19,White
-2103,Iowa,IA,9319,8.9,2,"Black alone, not Hispanic",2018,19,Black
-2106,Kansas,KS,137869,7.9,1,"White alone, not Hispanic",2018,20,White
-2107,Kansas,KS,16988,12.2,2,"Black alone, not Hispanic",2018,20,Black
-2110,Kentucky,KY,176555,5.9,1,"White alone, not Hispanic",2018,21,White
-2111,Kentucky,KY,23007,7.6,2,"Black alone, not Hispanic",2018,21,Black
-2114,Louisiana,LA,165871,7.6,1,"White alone, not Hispanic",2018,22,White
-2115,Louisiana,LA,118159,9.4,2,"Black alone, not Hispanic",2018,22,Black
-2118,Maine,ME,93268,9.8,1,"White alone, not Hispanic",2018,23,White
-2119,Maine,ME,2650,14.2,2,"Black alone, not Hispanic",2018,23,Black
-2122,Maryland,MD,91640,3.8,1,"White alone, not Hispanic",2018,24,White
-2123,Maryland,MD,106945,7.0,2,"Black alone, not Hispanic",2018,24,Black
-2126,Massachusetts,MA,97777,2.6,1,"White alone, not Hispanic",2018,25,White
-2127,Massachusetts,MA,17649,4.1,2,"Black alone, not Hispanic",2018,25,Black
-2130,Michigan,MI,344211,5.8,1,"White alone, not Hispanic",2018,26,White
-2131,Michigan,MI,83352,7.3,2,"Black alone, not Hispanic",2018,26,Black
-2134,Minnesota,MN,140397,3.9,1,"White alone, not Hispanic",2018,27,White
-2135,Minnesota,MN,22463,6.7,2,"Black alone, not Hispanic",2018,27,Black
-2138,Mississippi,MS,162963,12.4,1,"White alone, not Hispanic",2018,28,White
-2139,Mississippi,MS,150172,16.0,2,"Black alone, not Hispanic",2018,28,Black
-2142,Missouri,MO,397703,10.3,1,"White alone, not Hispanic",2018,29,White
-2143,Missouri,MO,81517,13.7,2,"Black alone, not Hispanic",2018,29,Black
-2146,Montana,MT,65175,9.2,1,"White alone, not Hispanic",2018,30,White
-2147,Montana,MT,659,13.4,2,"Black alone, not Hispanic",2018,30,Black
-2150,Nebraska,NE,87299,7.2,1,"White alone, not Hispanic",2018,31,White
-2151,Nebraska,NE,9766,12.1,2,"Black alone, not Hispanic",2018,31,Black
-2154,Nevada,NV,95385,8.5,1,"White alone, not Hispanic",2018,32,White
-2155,Nevada,NV,26791,11.3,2,"Black alone, not Hispanic",2018,32,Black
-2158,New Hampshire,NH,61796,6.5,1,"White alone, not Hispanic",2018,33,White
-2159,New Hampshire,NH,1578,9.4,2,"Black alone, not Hispanic",2018,33,Black
-2162,New Jersey,NJ,189867,5.0,1,"White alone, not Hispanic",2018,34,White
-2163,New Jersey,NJ,88629,9.2,2,"Black alone, not Hispanic",2018,34,Black
-2166,New Mexico,NM,36064,6.5,1,"White alone, not Hispanic",2018,35,White
-2167,New Mexico,NM,3312,10.6,2,"Black alone, not Hispanic",2018,35,Black
-2170,New York,NY,343052,4.1,1,"White alone, not Hispanic",2018,36,White
-2171,New York,NY,152657,6.5,2,"Black alone, not Hispanic",2018,36,Black
-2174,North Carolina,NC,508621,10.0,1,"White alone, not Hispanic",2018,37,White
-2175,North Carolina,NC,232892,12.6,2,"Black alone, not Hispanic",2018,37,Black
-2178,North Dakota,ND,34702,6.8,1,"White alone, not Hispanic",2018,38,White
-2179,North Dakota,ND,2858,12.3,2,"Black alone, not Hispanic",2018,38,Black
-2182,Ohio,OH,503549,6.9,1,"White alone, not Hispanic",2018,39,White
-2183,Ohio,OH,115205,9.4,2,"Black alone, not Hispanic",2018,39,Black
-2186,Oklahoma,OK,260356,13.0,1,"White alone, not Hispanic",2018,40,White
-2187,Oklahoma,OK,41855,17.3,2,"Black alone, not Hispanic",2018,40,Black
-2190,Oregon,OR,163714,6.7,1,"White alone, not Hispanic",2018,41,White
-2191,Oregon,OR,6588,9.3,2,"Black alone, not Hispanic",2018,41,Black
-2194,Pennsylvania,PA,435120,5.8,1,"White alone, not Hispanic",2018,42,White
-2195,Pennsylvania,PA,86952,7.6,2,"Black alone, not Hispanic",2018,42,Black
-2198,Rhode Island,RI,19364,3.4,1,"White alone, not Hispanic",2018,44,White
-2199,Rhode Island,RI,2718,5.0,2,"Black alone, not Hispanic",2018,44,Black
-2202,South Carolina,SC,263407,10.6,1,"White alone, not Hispanic",2018,45,White
-2203,South Carolina,SC,154136,13.8,2,"Black alone, not Hispanic",2018,45,Black
-2206,South Dakota,SD,49108,8.7,1,"White alone, not Hispanic",2018,46,White
-2207,South Dakota,SD,2869,15.6,2,"Black alone, not Hispanic",2018,46,Black
-2210,Tennessee,TN,403122,10.2,1,"White alone, not Hispanic",2018,47,White
-2211,Tennessee,TN,130362,13.5,2,"Black alone, not Hispanic",2018,47,Black
-2214,Texas,TX,1179644,12.5,1,"White alone, not Hispanic",2018,48,White
-2215,Texas,TX,493337,16.7,2,"Black alone, not Hispanic",2018,48,Black
-2218,Utah,UT,157817,7.4,1,"White alone, not Hispanic",2018,49,White
-2219,Utah,UT,4504,13.7,2,"Black alone, not Hispanic",2018,49,Black
-2222,Vermont,VT,20351,4.6,1,"White alone, not Hispanic",2018,50,White
-2223,Vermont,VT,463,6.6,2,"Black alone, not Hispanic",2018,50,Black
-2226,Virginia,VA,307115,7.4,1,"White alone, not Hispanic",2018,51,White
-2227,Virginia,VA,158333,11.8,2,"Black alone, not Hispanic",2018,51,Black
-2230,Washington,WA,223229,5.5,1,"White alone, not Hispanic",2018,53,White
-2231,Washington,WA,22180,8.6,2,"Black alone, not Hispanic",2018,53,Black
-2234,West Virginia,WV,96403,7.5,1,"White alone, not Hispanic",2018,54,White
-2235,West Virginia,WV,4913,10.2,2,"Black alone, not Hispanic",2018,54,Black
-2238,Wisconsin,WI,193756,5.2,1,"White alone, not Hispanic",2018,55,White
-2239,Wisconsin,WI,26501,8.3,2,"Black alone, not Hispanic",2018,55,Black
-2242,Wyoming,WY,41920,10.8,1,"White alone, not Hispanic",2018,56,White
-2243,Wyoming,WY,875,16.0,2,"Black alone, not Hispanic",2018,56,Black
+2042,Alabama,AL,255754,0.102,1,"White alone, not Hispanic",2018,01,White
+2043,Alabama,AL,143788,0.133,2,"Black alone, not Hispanic",2018,01,Black
+2046,Alaska,AK,39798,0.107,1,"White alone, not Hispanic",2018,02,White
+2047,Alaska,AK,3560,0.16399999999999998,2,"Black alone, not Hispanic",2018,02,Black
+2050,Arizona,AZ,231627,0.08199999999999999,1,"White alone, not Hispanic",2018,04,White
+2051,Arizona,AZ,30880,0.115,2,"Black alone, not Hispanic",2018,04,Black
+2054,Arkansas,AR,132836,0.078,1,"White alone, not Hispanic",2018,05,White
+2055,Arkansas,AR,38420,0.099,2,"Black alone, not Hispanic",2018,05,Black
+2058,California,CA,559114,0.05,1,"White alone, not Hispanic",2018,06,White
+2059,California,CA,123035,0.068,2,"Black alone, not Hispanic",2018,06,Black
+2062,Colorado,CO,196762,0.063,1,"White alone, not Hispanic",2018,08,White
+2063,Colorado,CO,17374,0.08900000000000001,2,"Black alone, not Hispanic",2018,08,Black
+2066,Connecticut,CT,70803,0.039,1,"White alone, not Hispanic",2018,09,White
+2067,Connecticut,CT,21685,0.07,2,"Black alone, not Hispanic",2018,09,Black
+2070,Delaware,DE,22985,0.052000000000000005,1,"White alone, not Hispanic",2018,10,White
+2071,Delaware,DE,11692,0.066,2,"Black alone, not Hispanic",2018,10,Black
+2074,District of Columbia,DC,3869,0.018000000000000002,1,"White alone, not Hispanic",2018,11,White
+2075,District of Columbia,DC,10283,0.04,2,"Black alone, not Hispanic",2018,11,Black
+2078,Florida,FL,1048169,0.13,1,"White alone, not Hispanic",2018,12,White
+2079,Florida,FL,460727,0.165,2,"Black alone, not Hispanic",2018,12,Black
+2082,Georgia,GA,560237,0.128,1,"White alone, not Hispanic",2018,13,White
+2083,Georgia,GA,443896,0.156,2,"Black alone, not Hispanic",2018,13,Black
+2086,Hawaii,HI,7781,0.035,1,"White alone, not Hispanic",2018,15,White
+2087,Hawaii,HI,1292,0.054000000000000006,2,"Black alone, not Hispanic",2018,15,Black
+2090,Idaho,ID,128868,0.111,1,"White alone, not Hispanic",2018,16,White
+2091,Idaho,ID,1745,0.149,2,"Black alone, not Hispanic",2018,16,Black
+2094,Illinois,IL,326261,0.053,1,"White alone, not Hispanic",2018,17,White
+2095,Illinois,IL,133921,0.09,2,"Black alone, not Hispanic",2018,17,Black
+2098,Indiana,IN,349989,0.083,1,"White alone, not Hispanic",2018,18,White
+2099,Indiana,IN,61859,0.115,2,"Black alone, not Hispanic",2018,18,Black
+2102,Iowa,IA,98913,0.047,1,"White alone, not Hispanic",2018,19,White
+2103,Iowa,IA,9319,0.08900000000000001,2,"Black alone, not Hispanic",2018,19,Black
+2106,Kansas,KS,137869,0.079,1,"White alone, not Hispanic",2018,20,White
+2107,Kansas,KS,16988,0.122,2,"Black alone, not Hispanic",2018,20,Black
+2110,Kentucky,KY,176555,0.059000000000000004,1,"White alone, not Hispanic",2018,21,White
+2111,Kentucky,KY,23007,0.076,2,"Black alone, not Hispanic",2018,21,Black
+2114,Louisiana,LA,165871,0.076,1,"White alone, not Hispanic",2018,22,White
+2115,Louisiana,LA,118159,0.094,2,"Black alone, not Hispanic",2018,22,Black
+2118,Maine,ME,93268,0.098,1,"White alone, not Hispanic",2018,23,White
+2119,Maine,ME,2650,0.142,2,"Black alone, not Hispanic",2018,23,Black
+2122,Maryland,MD,91640,0.038,1,"White alone, not Hispanic",2018,24,White
+2123,Maryland,MD,106945,0.07,2,"Black alone, not Hispanic",2018,24,Black
+2126,Massachusetts,MA,97777,0.026000000000000002,1,"White alone, not Hispanic",2018,25,White
+2127,Massachusetts,MA,17649,0.040999999999999995,2,"Black alone, not Hispanic",2018,25,Black
+2130,Michigan,MI,344211,0.057999999999999996,1,"White alone, not Hispanic",2018,26,White
+2131,Michigan,MI,83352,0.073,2,"Black alone, not Hispanic",2018,26,Black
+2134,Minnesota,MN,140397,0.039,1,"White alone, not Hispanic",2018,27,White
+2135,Minnesota,MN,22463,0.067,2,"Black alone, not Hispanic",2018,27,Black
+2138,Mississippi,MS,162963,0.124,1,"White alone, not Hispanic",2018,28,White
+2139,Mississippi,MS,150172,0.16,2,"Black alone, not Hispanic",2018,28,Black
+2142,Missouri,MO,397703,0.10300000000000001,1,"White alone, not Hispanic",2018,29,White
+2143,Missouri,MO,81517,0.13699999999999998,2,"Black alone, not Hispanic",2018,29,Black
+2146,Montana,MT,65175,0.092,1,"White alone, not Hispanic",2018,30,White
+2147,Montana,MT,659,0.134,2,"Black alone, not Hispanic",2018,30,Black
+2150,Nebraska,NE,87299,0.07200000000000001,1,"White alone, not Hispanic",2018,31,White
+2151,Nebraska,NE,9766,0.121,2,"Black alone, not Hispanic",2018,31,Black
+2154,Nevada,NV,95385,0.085,1,"White alone, not Hispanic",2018,32,White
+2155,Nevada,NV,26791,0.113,2,"Black alone, not Hispanic",2018,32,Black
+2158,New Hampshire,NH,61796,0.065,1,"White alone, not Hispanic",2018,33,White
+2159,New Hampshire,NH,1578,0.094,2,"Black alone, not Hispanic",2018,33,Black
+2162,New Jersey,NJ,189867,0.05,1,"White alone, not Hispanic",2018,34,White
+2163,New Jersey,NJ,88629,0.092,2,"Black alone, not Hispanic",2018,34,Black
+2166,New Mexico,NM,36064,0.065,1,"White alone, not Hispanic",2018,35,White
+2167,New Mexico,NM,3312,0.106,2,"Black alone, not Hispanic",2018,35,Black
+2170,New York,NY,343052,0.040999999999999995,1,"White alone, not Hispanic",2018,36,White
+2171,New York,NY,152657,0.065,2,"Black alone, not Hispanic",2018,36,Black
+2174,North Carolina,NC,508621,0.1,1,"White alone, not Hispanic",2018,37,White
+2175,North Carolina,NC,232892,0.126,2,"Black alone, not Hispanic",2018,37,Black
+2178,North Dakota,ND,34702,0.068,1,"White alone, not Hispanic",2018,38,White
+2179,North Dakota,ND,2858,0.12300000000000001,2,"Black alone, not Hispanic",2018,38,Black
+2182,Ohio,OH,503549,0.069,1,"White alone, not Hispanic",2018,39,White
+2183,Ohio,OH,115205,0.094,2,"Black alone, not Hispanic",2018,39,Black
+2186,Oklahoma,OK,260356,0.13,1,"White alone, not Hispanic",2018,40,White
+2187,Oklahoma,OK,41855,0.17300000000000001,2,"Black alone, not Hispanic",2018,40,Black
+2190,Oregon,OR,163714,0.067,1,"White alone, not Hispanic",2018,41,White
+2191,Oregon,OR,6588,0.09300000000000001,2,"Black alone, not Hispanic",2018,41,Black
+2194,Pennsylvania,PA,435120,0.057999999999999996,1,"White alone, not Hispanic",2018,42,White
+2195,Pennsylvania,PA,86952,0.076,2,"Black alone, not Hispanic",2018,42,Black
+2198,Rhode Island,RI,19364,0.034,1,"White alone, not Hispanic",2018,44,White
+2199,Rhode Island,RI,2718,0.05,2,"Black alone, not Hispanic",2018,44,Black
+2202,South Carolina,SC,263407,0.106,1,"White alone, not Hispanic",2018,45,White
+2203,South Carolina,SC,154136,0.138,2,"Black alone, not Hispanic",2018,45,Black
+2206,South Dakota,SD,49108,0.087,1,"White alone, not Hispanic",2018,46,White
+2207,South Dakota,SD,2869,0.156,2,"Black alone, not Hispanic",2018,46,Black
+2210,Tennessee,TN,403122,0.102,1,"White alone, not Hispanic",2018,47,White
+2211,Tennessee,TN,130362,0.135,2,"Black alone, not Hispanic",2018,47,Black
+2214,Texas,TX,1179644,0.125,1,"White alone, not Hispanic",2018,48,White
+2215,Texas,TX,493337,0.16699999999999998,2,"Black alone, not Hispanic",2018,48,Black
+2218,Utah,UT,157817,0.07400000000000001,1,"White alone, not Hispanic",2018,49,White
+2219,Utah,UT,4504,0.13699999999999998,2,"Black alone, not Hispanic",2018,49,Black
+2222,Vermont,VT,20351,0.046,1,"White alone, not Hispanic",2018,50,White
+2223,Vermont,VT,463,0.066,2,"Black alone, not Hispanic",2018,50,Black
+2226,Virginia,VA,307115,0.07400000000000001,1,"White alone, not Hispanic",2018,51,White
+2227,Virginia,VA,158333,0.11800000000000001,2,"Black alone, not Hispanic",2018,51,Black
+2230,Washington,WA,223229,0.055,1,"White alone, not Hispanic",2018,53,White
+2231,Washington,WA,22180,0.086,2,"Black alone, not Hispanic",2018,53,Black
+2234,West Virginia,WV,96403,0.075,1,"White alone, not Hispanic",2018,54,White
+2235,West Virginia,WV,4913,0.102,2,"Black alone, not Hispanic",2018,54,Black
+2238,Wisconsin,WI,193756,0.052000000000000005,1,"White alone, not Hispanic",2018,55,White
+2239,Wisconsin,WI,26501,0.083,2,"Black alone, not Hispanic",2018,55,Black
+2242,Wyoming,WY,41920,0.10800000000000001,1,"White alone, not Hispanic",2018,56,White
+2243,Wyoming,WY,875,0.16,2,"Black alone, not Hispanic",2018,56,Black

@@ -44,6 +44,7 @@ for col in numeric_cols:
 
 df_race = df_race.rename({'NUI_PT': 'number_uninsured', 'PCTUI_PT': 'percent_uninsured',
                           'RACE_DESC': 'race_category'}, axis=1)
+df_race['percent_uninsured'] = df_race['percent_uninsured'] / 100
 
 ##Subset to only white and black in 2018
 df_race_viz = df_race[(df_race['race_category'] == 'White alone, not Hispanic') |
@@ -100,11 +101,22 @@ coverage_type = coverage_type.drop(['Footnotes', 'Total', 'Non-Group',
 coverage_type_natl = coverage_type[coverage_type['Location'] == 'United States']
 coverage_type = coverage_type[coverage_type['Location'] != 'United States']
 
-#add in expansion y/n and restrict to 2018
+#add in expansion y/n and restrict to 2018 or 2008
 coverage_type = coverage_type.merge(expansion_df[['Location', 'expanded_medicaid']],
                                     on='Location')
 coverage_type_2018 = coverage_type[(coverage_type['year'] == 2018) | (coverage_type['year'] == 2008)]
+coverage_type_2018 = coverage_type_2018.merge(df_all_2008_2018[['NAME', 'state']].drop_duplicates(),
+                         left_on='Location', right_on='NAME')
 
+
+#reshape national coverage
+coverage_type_natl = pd.melt(coverage_type_natl, id_vars=['year'], 
+                                  value_vars=['Employer', 'Medicaid', 'Uninsured', 
+                                              'Other']).rename({'variable': 
+                                              'source', 'value': 'percent'}, axis=1)
+coverage_type_natl['color_order'] = np.where(coverage_type_natl['source'] == 'Medicaid', 1,
+                                                  np.where(coverage_type_natl['source'] == 'Employer', 2,
+                                                           np.where(coverage_type_natl['source'] == 'Other', 3, 4)))
 
 
 ###Uninsured rate by FPL
@@ -116,8 +128,16 @@ uninsured_fpl = uninsured_fpl.drop(['Total', 'Footnotes'], axis=1)
 uninsured_fpl_natl = uninsured_fpl[uninsured_fpl['Location'] == 'United States']
 uninsured_fpl = uninsured_fpl[uninsured_fpl['Location'] != 'United States']
 
+uninsured_fpl = pd.melt(uninsured_fpl, id_vars=['Location'], 
+                                value_vars=['Under 100%', '100-199%',
+                                            '200-399%', '400%+']).rename({'variable': 
+                                            'income_level', 'value': 'percent'}, axis=1)
+
 uninsured_fpl = uninsured_fpl.merge(expansion_df[['Location', 'expanded_medicaid']],
                                     on='Location')
+
+uninsured_fpl = uninsured_fpl.merge(df_all_2008_2018[['NAME', 'state']].drop_duplicates(), 
+                                    left_on='Location', right_on='NAME').drop('NAME', axis=1)
 
 
 #Medicaid coverage by age, both number and percent
@@ -142,14 +162,30 @@ medicaid_age_num = read_medicaid_age_data('//medicaid_age_number')
 medicaid_age_perc_natl = medicaid_age_perc[medicaid_age_perc['Location'] == 'United States']
 medicaid_age_perc = medicaid_age_perc[medicaid_age_perc['Location'] != 'United States']
 
+medicaid_age_perc_natl = pd.melt(medicaid_age_perc_natl, id_vars=['Year'], 
+                                value_vars=['Adults 19-64', 'Children 0-18', 'Total']
+                                ).rename({'variable': 'age_group', 'value': 'perc_medicaid'}, axis=1)
+
+
+
 medicaid_age_num_natl = medicaid_age_num[medicaid_age_num['Location'] == 'United States']
 medicaid_age_num = medicaid_age_num[medicaid_age_num['Location'] != 'United States']
+
+medicaid_age_num_natl = pd.melt(medicaid_age_num_natl, id_vars=['Year'], 
+                                value_vars=['Adults 19-64', 'Children 0-18', 'Total']
+                                ).rename({'variable': 'age_group', 'value': 'num_medicaid'}, axis=1)
+medicaid_age_num_natl = medicaid_age_num_natl[medicaid_age_num_natl['age_group'] != 'Total']
+medicaid_age_num_natl['num_medicaid_mil'] = medicaid_age_num_natl['num_medicaid'] / 1000000
 
 
 #Uninsured by age
 uninsured_age = read_medicaid_age_data('//uninsured_by_age_2008_2019')
 uninsured_age_natl = uninsured_age[uninsured_age['Location'] == 'United States']
 uninsured_age = uninsured_age[uninsured_age['Location'] != 'United States']
+
+uninsured_age_natl = pd.melt(uninsured_age_natl, id_vars=['Year'], 
+                            value_vars=['Adults 19-64', 'Children 0-18', 'Total']
+                            ).rename({'variable': 'age_group', 'value': 'perc_uninsured'}, axis=1)
 
 
 #Medicaid income eligibility limits
@@ -191,4 +227,4 @@ uninsured_fpl.to_csv(file_path + '\\uninsured_fpl.csv')
 medicaid_age_perc_natl.to_csv(file_path + '\\medicaid_age_perc_natl.csv')
 medicaid_age_num_natl.to_csv(file_path + '\\medicaid_age_num_natl.csv')
 uninsured_age_natl.to_csv(file_path + '\\uninsured_age_natl.csv')
-elig_limits_long.to_csv(file_path + 'elig_limits_long.csv')
+elig_limits_long.to_csv(file_path + '\\elig_limits_long.csv')
