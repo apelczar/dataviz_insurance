@@ -35,27 +35,27 @@ get_vars_race = ['NAME', 'STABREV', 'NUI_PT', 'PCTUI_PT', 'RACECAT', 'RACE_DESC'
 full_url_race = base_url + "get=" + ",".join(get_vars_race) + "&for=state:*&time=from+2008"
 r_race = requests.get(full_url_race)
 
-df_race = pd.DataFrame(data=r_race.json())
+df_county = pd.DataFrame(data=r_race.json())
 
-df_race.columns = df_race.iloc[0]
-df_race = df_race[1:]
+df_county.columns = df_county.iloc[0]
+df_county = df_county[1:]
 for col in numeric_cols:
-    df_race[col] = pd.to_numeric(df_race[col])
+    df_county[col] = pd.to_numeric(df_county[col])
 
-df_race = df_race.rename({'NUI_PT': 'number_uninsured', 'PCTUI_PT': 'percent_uninsured',
+df_county = df_county.rename({'NUI_PT': 'number_uninsured', 'PCTUI_PT': 'percent_uninsured',
                           'RACE_DESC': 'race_category'}, axis=1)
-df_race['percent_uninsured'] = df_race['percent_uninsured'] / 100
+df_county['percent_uninsured'] = df_county['percent_uninsured'] / 100
 
 ##Subset to only white and black in 2018
-df_race_viz = df_race[(df_race['race_category'] == 'White alone, not Hispanic') |
-                      (df_race['race_category'] == 'Black alone, not Hispanic')]
+df_county_viz = df_county[(df_county['race_category'] == 'White alone, not Hispanic') |
+                      (df_county['race_category'] == 'Black alone, not Hispanic')]
 
-df_race_viz['race_cat_short'] = df_race_viz['race_category'].str.slice(0, 5)
-df_race_viz_2018 = df_race_viz[df_race_viz['time'] == 2018]
+df_county_viz['race_cat_short'] = df_county_viz['race_category'].str.slice(0, 5)
+df_county_viz_2018 = df_county_viz[df_county_viz['time'] == 2018]
 
 
 ##Use the same dataset for an overall visualization
-df_all_2008_2018 = df_race[df_race['race_category'] == 'All Races']
+df_all_2008_2018 = df_county[df_county['race_category'] == 'All Races']
 
 #Highlight New Mexico (largest decrease, at -12.4) and Massachusetts (smallest
 #decrease, -1.1)
@@ -63,6 +63,21 @@ df_all_2008_2018['highlight'] = np.where(df_all_2008_2018['NAME'] == 'New Mexico
                                np.where(df_all_2008_2018['NAME'] == 'Massachusetts', 2, 0))
 
 
+##Do the same at the county level
+get_vars_county = ['NAME', 'GEOID', 'STABREV', 'PCTUI_PT']
+full_url_county = base_url + "get=" + ",".join(get_vars_county) + "&for=county:*&time=2018"
+r_county = requests.get(full_url_county)
+
+df_county = pd.DataFrame(data=r_county.json())
+
+df_county.columns = df_county.iloc[0]
+df_county = df_county[1:]
+df_county[df_county['PCTUI_PT'] == 'N/A'] = None
+for col in numeric_cols[1:]:
+    df_county[col] = pd.to_numeric(df_county[col])
+
+df_county = df_county.rename({'PCTUI_PT': 'percent_uninsured'}, axis=1)
+df_county['percent_uninsured'] = df_county['percent_uninsured'] / 100
 
 
 ###KFF Data
@@ -206,7 +221,7 @@ elig_limits_long = elig_limits_long[(elig_limits_long['Location'] != 'United Sta
 
 
 ####Datasets to write out:
-#df_race_viz_2018
+#df_county_viz_2018
 #df_all_2008_2018
 #coverage_type_2018
 #coverage_type_natl
@@ -217,7 +232,7 @@ elig_limits_long = elig_limits_long[(elig_limits_long['Location'] != 'United Sta
 #elig_limits_long
 
 #write out datasets
-df_race_viz_2018.to_csv(file_path + '\\df_race_viz_2018.csv')
+df_county_viz_2018.to_csv(file_path + '\\df_county_viz_2018.csv')
 df_all_2008_2018.to_csv(file_path + '\\df_all_2008_2018.csv')
 
 coverage_type_2018.to_csv(file_path + '\\coverage_type_2018.csv')
@@ -228,3 +243,5 @@ medicaid_age_perc_natl.to_csv(file_path + '\\medicaid_age_perc_natl.csv')
 medicaid_age_num_natl.to_csv(file_path + '\\medicaid_age_num_natl.csv')
 uninsured_age_natl.to_csv(file_path + '\\uninsured_age_natl.csv')
 elig_limits_long.to_csv(file_path + '\\elig_limits_long.csv')
+
+df_county.to_csv(file_path + '\\df_county.csv')
